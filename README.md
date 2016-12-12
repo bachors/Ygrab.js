@@ -21,6 +21,14 @@ $(function() {
                         value: '' // attribut value string optional
                     }
                 },
+                {
+                    name: 'link',
+                    find: 'h3 a',
+                    grab: {
+                        by: 'attr',
+                        value: 'href'
+                    }
+                },
                 // ---- etc ---- //
             ]
         },
