@@ -1,0 +1,25 @@
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/ygrab.js"></script>
+<script>		
+$(function() {
+
+	var data = {
+		url: 'http://ibacor.com/blog',
+		selector: 'div.post',
+		loop: true,
+		result: [{
+			name: 'title',
+			find: 'h3 a',
+			grab: {
+				by: 'text',
+				value: ''
+			}
+		}]
+	};
+	
+	var result = ygrab(data);
+	
+	console.log(JSON.stringify(result, null, 2));
+	
+});
+</script>
