@@ -58,6 +58,3 @@ $(function() {
     ...
   ]
 }</pre>
-
-<h3><a href="http://ibacor.com/demo/ygrabjs-dynamic-web-scrapping-by-object-using-yql">TUTORIAL</a></h3>
-<h3><a href="http://ibacor.com/tools/web-scraping-generator">DEMO</a></h3>
