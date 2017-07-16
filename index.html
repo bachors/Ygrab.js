@@ -1,10 +1,13 @@
+http://bachors.com/blog
+<pre id="res"></pre>
+
 <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="js/ygrab.js"></script>
 <script>		
 $(function() {
 
 	var data = {
-		url: 'http://ibacor.com/blog',
+		url: 'http://bachors.com/blog',
 		selector: 'div.post',
 		loop: true,
 		result: [{
@@ -19,7 +22,7 @@ $(function() {
 	
 	var result = ygrab(data);
 	
-	console.log(JSON.stringify(result, null, 2));
+	$('#res').html(JSON.stringify(result, null, 2));
 	
 });
 </script>
