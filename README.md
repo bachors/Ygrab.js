@@ -9,7 +9,7 @@ $(function() {
 
     var data = [
         {
-            url: 'http://ibacor.com/blog', // url string rquired
+            url: 'http://bachors.com/blog', // url string rquired
             selector: 'div.post', // selector string rquired
             loop: true, // each boolean rquired
             result: [
@@ -35,26 +35,31 @@ $(function() {
         // ---- new website url ---- //
     ];
     
-    var result = ygrab(data);
-    
-    console.log(JSON.stringify(result, null, 2));
+    ygrab(data, function(result) {
+		console.log(JSON.stringify(result, null, 2));
+	});
     
 });
 &lt;/script&gt;</pre>
 
 <h3>Result:</h3>
-<pre>{
-  "result": [
-    {
-      "title": "Mengetahui Informasi Suatu Negara Menggunakan API Worldbank",
-      "image": "http://ibacor.com/bcr_asset/images/artikel/11794390317144d0693208eefbc6f908.jpg",
-      "link": "http://ibacor.com/blog/mengetahui-informasi-suatu-negara-menggunakan-api-worldbank"
-    },
-    {
-      "title": "Tutorial Login, Register, Logout & CRUD menggunakan PHP & MySQLi OOP + Bootstrap",
-      "image": "http://ibacor.com/bcr_asset/images/artikel/e234a76c6b3133e6abd25c9325267ee1.jpg",
-      "link": "http://ibacor.com/blog/tutorial-login-register-logout-crud-menggunakan-php-mysqli-oop-bootstrap"
-    },
-    ...
-  ]
-}</pre>
+<pre>[
+  {
+    "title": "Membuat Aplikasi Android Pencarian Kode POS "
+  },
+  {
+    "title": "Cara mengkonversi video ke gif menggunakan javascript"
+  },
+  {
+    "title": "Cara Backup File & Database di Codeigniter"
+  },
+  {
+    "title": "Membuat aplikasi chatting secara real time menggunakan firebase & jQuery"
+  },
+  {
+    "title": "Cara membuat website menjadi ringan & cepat"
+  },
+  {
+    "title": "Contoh setting file .htaccess"
+  }
+]</pre>
