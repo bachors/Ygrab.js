@@ -10,14 +10,24 @@ $(function() {
 		url: 'http://bachors.com/blog',
 		selector: 'div.post',
 		loop: true,
-		result: [{
-			name: 'title',
-			find: 'h3 a',
-			grab: {
-				by: 'text',
-				value: ''
+		result: [
+			{
+				name: 'title',
+				find: 'h3 a',
+				grab: {
+					by: 'text',
+					value: ''
+				}
+			},
+			{
+				name: 'link',
+				find: 'h3 a',
+				grab: {
+					by: 'attr',
+					value: 'href'
+				}
 			}
-		}]
+		]
 	};
 	
 	ygrab(data, function(result) {
