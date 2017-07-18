@@ -20,9 +20,9 @@ $(function() {
 		}]
 	};
 	
-	var result = ygrab(data);
-	
-	$('#res').html(JSON.stringify(result, null, 2));
+	ygrab(data, function(result) {
+		$('#res').html(JSON.stringify(result, null, 2));
+	});
 	
 });
 </script>
