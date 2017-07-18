@@ -45,21 +45,27 @@ $(function() {
 <h3>Result:</h3>
 <pre>[
   {
-    "title": "Membuat Aplikasi Android Pencarian Kode POS "
+    "title": "Membuat Aplikasi Android Pencarian Kode POS ",
+    "link": "http://bachors.com/blog/membuat-aplikasi-android-pencarian-kode-pos"
   },
   {
-    "title": "Cara mengkonversi video ke gif menggunakan javascript"
+    "title": "Cara mengkonversi video ke gif menggunakan javascript",
+    "link": "http://bachors.com/blog/how-to-convert-video-to-gif-using-javascript"
   },
   {
-    "title": "Cara Backup File & Database di Codeigniter"
+    "title": "Cara Backup File & Database di Codeigniter",
+    "link": "http://bachors.com/blog/cara-backup-file-database-di-codeigniter"
   },
   {
-    "title": "Membuat aplikasi chatting secara real time menggunakan firebase & jQuery"
+    "title": "Membuat aplikasi chatting secara real time menggunakan firebase & jQuery",
+    "link": "http://bachors.com/blog/membuat-aplikasi-chatting-secara-real-time-menggunakan-firebase-jquery"
   },
   {
-    "title": "Cara membuat website menjadi ringan & cepat"
+    "title": "Cara membuat website menjadi ringan & cepat",
+    "link": "http://bachors.com/blog/cara-membuat-website-menjadi-ringan-cepat"
   },
   {
-    "title": "Contoh setting file .htaccess"
+    "title": "Contoh setting file .htaccess",
+    "link": "http://bachors.com/blog/contoh-setting-file-htaccess"
   }
 ]</pre>
