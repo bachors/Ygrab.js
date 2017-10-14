@@ -1,5 +1,5 @@
 # Ygrab.js
-Dynamic web scrapping that allows you to turn any site into a JSON accessible api using CSS selectors. This api using YQL.
+Dynamic web scrapping that allows you to turn any site into a JSON accessible api using CSS selectors. This api using google script.
 
 <h3>Usage:</h3>
 <pre>&lt;script src="//code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;
