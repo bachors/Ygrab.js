@@ -3,23 +3,35 @@
 <script>		
 $(function() {
 
-	var data = {
-		url: 'http://ibacor.com/blog',
-		selector: 'div.post',
-		loop: true,
-		result: [{
-			name: 'title',
-			find: 'h3 a',
-			grab: {
-				by: 'text',
-				value: ''
-			}
-		}]
-	};
-	
-	var result = ygrab(data);
-	
-	console.log(JSON.stringify(result, null, 2));
+	var data = [
+    {
+        url: 'http://bachors.com/blog', // url string rquired
+        selector: 'div.post', // selector string rquired
+        loop: true, // each boolean rquired
+        result: [
+            {
+                name: 'title', // key string rquired
+                find: 'h3 a', // selector child string rquired
+                grab: {
+                    by: 'text', // attribut string rquired
+                    value: '' // attribut value string optional
+                }
+            },
+            {
+                name: 'link',
+                find: 'h3 a',
+                grab: {
+                    by: 'attr',
+                    value: 'href'
+                }
+            }
+        ]
+    }
+];
+
+ygrab(data, function(result) {
+	alert(JSON.stringify(result, null, 2));
+});
 	
 });
 </script>
