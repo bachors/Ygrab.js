@@ -1,9 +1,9 @@
-/******************************************************
-* #### jQuery-Ygrab.js v0.0.2 ####
+/****************************************
+* #### jQuery-Ygrab.js v1.0 ####
 * Coded by Ican Bachors 2016.
-* http://ibacor.com/labs/jquery-ygrabjs/
+* https://github.com/bachors/Ygrab.js
 * Updates will be posted to this site.
-******************************************************/
+*****************************************/
 
 var ygrab = function(h, callback) {
 	
@@ -11,7 +11,7 @@ var ygrab = function(h, callback) {
 	
     if (Object.prototype.toString.call(h) === '[object Array]') {
         $.each(h, function(i, a) {			
-			yql(a.url, function(e) {			
+			GS(a.url, function(e) {			
 				if (a.loop) {
 					$.each($(e).find(a.selector), function() {
 						var c = $(this);
@@ -56,7 +56,7 @@ var ygrab = function(h, callback) {
         });
     } else {
         var a = h;		
-		yql(a.url, function(k) {
+		GS(a.url, function(k) {
 			if (a.loop) {
 				$.each($(k).find(a.selector), function() {
 					var c = $(this);
@@ -100,25 +100,10 @@ var ygrab = function(h, callback) {
         });
     }
 	
-    function yql(b, html) {
-        var d = '';
-        $.ajax({
-            url: 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('SELECT content FROM data.headers WHERE url="' + b + '" and ua="Googlebot/2.1 (http://www.googlebot.com/bot.html)"') + '&format=xml&env=store://datatables.org/alltableswithkeys',
-            async: true
-        }).done(function(a) {
-            var e = $(a).find("content").text();
-            d = removeElements(e);
-			html(d);
-        });
-    }
-
-    function removeElements(a) {
-        var b = $("<div>" + a + "</div>");
-        b.find('style').remove();
-        b.find("script").remove();
-        b.find("iframe").remove();
-        b.find("embed").remove();
-        return b.html()
+    function GS(b, html) {
+        $.getJSON("https://script.google.com/macros/s/AKfycbyMgb620k8sJr3FrESNboqRaVeMTVR-ZikslQeg2xLUoRnOeLAL/exec?url=" + b + "&callback=?",function(json){
+			html(json.data);
+		});
     }
 	
 }
