@@ -1,4 +1,4 @@
-http://bachors.com/blog
+https://bachors.js.org/
 <pre id="res"></pre>
 
 <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
@@ -7,21 +7,29 @@ http://bachors.com/blog
 $(function() {
 
 	var data = {
-		url: 'http://bachors.com/blog',
-		selector: 'div.post',
+		url: 'https://bachors.js.org/',
+		selector: 'div.project-card',
 		loop: true,
 		result: [
 			{
 				name: 'title',
-				find: 'h3 a',
+				find: 'h3',
 				grab: {
 					by: 'text',
 					value: ''
 				}
 			},
 			{
+				name: 'image',
+				find: 'img',
+				grab: {
+					by: 'attr',
+					value: 'src'
+				}
+			},
+			{
 				name: 'link',
-				find: 'h3 a',
+				find: 'a',
 				grab: {
 					by: 'attr',
 					value: 'href'
