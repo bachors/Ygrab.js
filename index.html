@@ -1,11 +1,57 @@
-https://bachors.js.org/
+Sample:
+<pre>&#x3C;script src=&#x22;//code.jquery.com/jquery-1.7.2.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;js/ygrab.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script&#x3E;&#x9;&#x9;
+$(function() {
+&#x9;
+&#x9;var data = {
+&#x9;&#x9;url: &#x27;https://bachors.js.org/&#x27;,
+&#x9;&#x9;selector: &#x27;div.project-card&#x27;,
+&#x9;&#x9;loop: true,
+&#x9;&#x9;result: [
+&#x9;&#x9;&#x9;{
+&#x9;&#x9;&#x9;&#x9;name: &#x27;title&#x27;,
+&#x9;&#x9;&#x9;&#x9;find: &#x27;h3&#x27;,
+&#x9;&#x9;&#x9;&#x9;grab: {
+&#x9;&#x9;&#x9;&#x9;&#x9;by: &#x27;text&#x27;,
+&#x9;&#x9;&#x9;&#x9;&#x9;value: &#x27;&#x27;
+&#x9;&#x9;&#x9;&#x9;}
+&#x9;&#x9;&#x9;},
+&#x9;&#x9;&#x9;{
+&#x9;&#x9;&#x9;&#x9;name: &#x27;image&#x27;,
+&#x9;&#x9;&#x9;&#x9;find: &#x27;img&#x27;,
+&#x9;&#x9;&#x9;&#x9;grab: {
+&#x9;&#x9;&#x9;&#x9;&#x9;by: &#x27;attr&#x27;,
+&#x9;&#x9;&#x9;&#x9;&#x9;value: &#x27;src&#x27;
+&#x9;&#x9;&#x9;&#x9;}
+&#x9;&#x9;&#x9;},
+&#x9;&#x9;&#x9;{
+&#x9;&#x9;&#x9;&#x9;name: &#x27;link&#x27;,
+&#x9;&#x9;&#x9;&#x9;find: &#x27;a.text-secondary-light&#x27;,
+&#x9;&#x9;&#x9;&#x9;grab: {
+&#x9;&#x9;&#x9;&#x9;&#x9;by: &#x27;attr&#x27;,
+&#x9;&#x9;&#x9;&#x9;&#x9;value: &#x27;href&#x27;
+&#x9;&#x9;&#x9;&#x9;}
+&#x9;&#x9;&#x9;}
+&#x9;&#x9;]
+&#x9;};
+&#x9;
+&#x9;ygrab(data, function(result) {
+&#x9;&#x9;$(&#x27;#res&#x27;).html(JSON.stringify(result, null, 2));
+&#x9;});
+&#x9;
+});
+&#x3C;/script&#x3E;
+</pre>
+<hr>
+Result:
 <pre id="res"></pre>
 
 <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="js/ygrab.js"></script>
 <script>		
 $(function() {
-
+	
 	var data = {
 		url: 'https://bachors.js.org/',
 		selector: 'div.project-card',
@@ -29,7 +75,7 @@ $(function() {
 			},
 			{
 				name: 'link',
-				find: 'a',
+				find: 'a.text-secondary-light',
 				grab: {
 					by: 'attr',
 					value: 'href'
